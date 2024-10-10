@@ -1,0 +1,177 @@
+/* Define box-sizing para incluir padding e border no tamanho total do elemento */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilização global do corpo da página */
+body {
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo em uma coluna */
+    background-color: rgb(13, 165, 165); /* Cor de fundo */
+    font-family: 'Arial', sans-serif; /* Fonte padrão da página */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem de fundo */
+    color: #ffffff; /* Cor do texto */
+    width: 100%; /* Define que o body ocupará toda a largura disponível */
+}
+
+/* Estilização do cabeçalho */
+header {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente para o cabeçalho */
+    z-index: 1; /* Garante que o header ficará acima de outros elementos */
+}
+
+/* Estilização global para as imagens */
+img {
+    max-width: 900px; /* Define um limite máximo de largura */
+    margin: 16px auto; /* Centraliza a imagem e adiciona margens verticais */
+    width: 100%; /* Faz a imagem ser responsiva */
+}
+
+/* Estilização do container principal da imagem de herói */
+.hero {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente a imagem */
+    align-items: center; /* Centraliza verticalmente a imagem */
+    width: 100%;
+    overflow: hidden; /* Impede que o conteúdo da imagem saia do container */
+}
+
+/* Estilização dos textos dentro da seção herói */
+.hero-texts {
+    text-align: center; /* Centraliza os textos */
+}
+
+/* Estilização dos títulos e parágrafos globais */
+h1, h2, h3, p {
+    margin: 16px 16px;
+    text-align: center; /* Centraliza o conteúdo */ /* Espaçamento inferior */
+}
+
+h1 {
+    font-size: 3em; /* Tamanho do título principal */
+}
+
+p {
+    font-size: 1.2em; /* Tamanho do texto dos parágrafos */
+    margin-bottom: 16px; /* Espaçamento entre os parágrafos */
+}
+
+
+/* Estilização responsiva para telas menores */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Reduz o tamanho do título principal */
+    }
+
+    p {
+        font-size: 1em; /* Reduz o tamanho dos parágrafos */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Reduz o tamanho dos subtítulos */
+    }
+
+    h3 {
+        font-size: 1.2em; /* Reduz o tamanho dos subtítulos menores */
+    }
+}
+
+/* Estilização da seção de trailers */
+#trailers {
+    display: flexbox; /* Usa o Flexbox para alinhar os itens */
+    flex-direction: row; /* Organiza os itens em linha */
+    padding-top: 0px; /* Espaçamento superior */
+    justify-content: center; /* Centraliza os trailers */
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 1200px; /* Define uma largura máxima */
+    margin: 0 auto; /* Centraliza a seção na página */
+}
+
+/* Estilização do container de vídeo */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Mantém a proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%; /* O vídeo ocupa toda a largura do container */
+}
+
+/* Estilização do iframe dentro do container de vídeo */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: 100%; /* Ocupa toda a altura do container */
+}
+
+/* Estilização de cada filme na seção de trailers */
+.movie {
+    background: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin: 20px auto; /* Margem entre os filmes */
+    padding: 20px; /* Preenchimento interno */
+    max-width: 800px; /* Largura máxima para cada filme */
+}
+
+/* Estilização dos pôsteres dos filmes */
+.movie-poster {
+    width: 100%; /* Faz o pôster ser responsivo */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Bordas arredondadas no pôster */
+}
+
+/* Estilização da seção de atores */
+#actors {
+    margin-top: 24px; /* Espaçamento superior */
+    padding-bottom: 24px; /* Espaço inferior */
+}
+
+#actors h2 {
+    text-align: center; /* Centraliza o título */
+    font-size: 2.5em; /* Tamanho do título */
+}
+
+/* Estilização responsiva para a seção de atores */
+@media (max-width: 768px) {
+    #actors h2 {
+        font-size: 1.5em; /* Reduz o tamanho do título em telas menores */
+    }
+}
+
+/* Layout da grid de atores */
+.actor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Cria colunas responsivas */
+    gap: 20px; /* Espaçamento entre os itens da grid */
+    padding: 8px;
+    max-width: 800px; /* Largura máxima da grid */
+    margin: 0 auto; /* Centraliza a grid na página */
+}
+
+/* Estilização individual dos atores */
+.actor {
+    text-align: center; /* Centraliza o conteúdo de cada ator */
+}
+
+/* Estilização das imagens dos atores */
+.actor img {
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    width: 100px; /* Largura fixa das imagens */
+    height: 150px; /* Altura fixa das imagens */
+    object-fit: cover; /* Corta a imagem sem distorcer */
+}
+
+/* Estilização do rodapé */
+footer {
+    text-align: center; /* Centraliza o conteúdo do rodapé */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente no rodapé */
+    position: relative; /* Rodapé fixo na parte inferior */
+    bottom: 0;
+    width: 100%; /* Ocupa toda a largura disponível */
+}
